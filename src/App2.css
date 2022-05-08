@@ -1,0 +1,13 @@
+.App2 {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  input{
+    background: transparent;
+    border: 20px;
+    border-style: solid;
+    border-color: #2be4e4;
+  }
