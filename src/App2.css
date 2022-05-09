@@ -3,6 +3,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-image: url('./image/bg2.png');
   }
 
   input{
