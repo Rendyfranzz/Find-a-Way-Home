@@ -159,7 +159,7 @@ const App2 = () => {
   };
 
   return (
-    <div className='App2 bg-cover bg-center bg-[url("https://img.itch.zone/aW1hZ2UvMTIxNjU4LzU2MDQxMC5wbmc=/original/hCUwLQ.png")]'>
+    <div className='App2 bg-cover bg-center'>
    
       <div className='flex flex-column py-6 mx-auto items-center text-center space-x-10'>
         <div className='flex items-center space-x-4'>
