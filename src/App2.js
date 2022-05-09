@@ -159,7 +159,7 @@ const App2 = () => {
   };
 
   return (
-    <div className='App2 bg-cover bg-center'>
+    <div className='App2 bg-cover bg-center h-screen'>
    
       <div className='flex flex-column py-6 mx-auto items-center text-center space-x-10'>
         <div className='flex items-center space-x-4'>
