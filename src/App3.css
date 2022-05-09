@@ -1,0 +1,26 @@
+.App3 {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-image: url("./image/desert.jpg");
+  }
+  .sand{
+    width: 80%;
+    animation: sand 0.9s linear infinite;
+  }
+  @keyframes sand{
+    0%{
+        background-position: 0% 0%;
+    }
+    100%{
+        background-position: 20% 100%;
+    }
+  }
+  
+.App3 input{
+    background: transparent;
+    border: 2px;
+    border-style: solid;
+    border-color: #f78c00;
+  }

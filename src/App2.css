@@ -1,0 +1,15 @@
+.App2 {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url('./image/bg2.png');
+  }
+
+  .App2 input{
+    background: transparent;
+    color: aliceblue;
+    border: 2px;
+    border-style: solid;
+    border-color: #2be4e4;
+  }
