@@ -24,13 +24,21 @@ const App = () => {
   const [grid, setGrid] = useState([]);
   const [isMousePressed, setIsMousePressed] = useState(false);
 
+  
   useEffect(() => {
     const getInitialGrid = () => {
       const grid = [];
       for (let row = 0; row < 20; row++) {
         const currentRow = [];
         for (let col = 0; col < 20; col++) {
-          currentRow.push(createNode(col, row));
+          var random = Math.random();
+          if(random>0.35){
+          currentRow.push(createNode(col, row));}
+          else if((col===0 && row===0) || (col===19 && row===19)){
+            currentRow.push(createNode(col, row));}
+            else {
+              currentRow.push(createNodeWall(col, row));
+            }
         }
         grid.push(currentRow);
       }
@@ -46,6 +54,19 @@ const App = () => {
         distance: Infinity,
         isVisited: false,
         isWall: false,
+        previousNode: null,
+      };
+    };
+
+    const createNodeWall = (col, row) => {
+      return {
+        col,
+        row,
+        isStart: row === peoplePosition.x - 1 && col === peoplePosition.y - 1,
+        isFinish: row === homePosition.x - 1 && col === homePosition.y - 1,
+        distance: Infinity,
+        isVisited: true,
+        isWall: true,
         previousNode: null,
       };
     };
