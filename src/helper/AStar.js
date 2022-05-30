@@ -133,7 +133,7 @@ export default class AStarSearch {
         
         let node = nodePqueue.node
         if (node.isWall) continue
-        console.log('traversed', `${node.row},${node.col} distance ${nodePqueue.distance + AStarSearch._manhattanDistance(node, nodePqueue.dest)}`)
+        console.log('traversed', `${node.row},${node.col} distance ${nodePqueue.distance + AStarSearch._euclideanDistance(node, nodePqueue.dest)}`)
         if (this._visited[`${node.row},${node.col}`] !== undefined) {
           if (this._visited[`${node.row},${node.col}`].distance < nodePqueue.distance) {
             /**
@@ -234,10 +234,10 @@ export default class AStarSearch {
     }
 
     static _calcDistFunc(nodePqueue, home) {
-      return nodePqueue.distance + AStarSearch._manhattanDistance(nodePqueue.node, home)
+      return nodePqueue.distance + AStarSearch._euclideanDistance(nodePqueue.node, home)
     }
 
-    static _manhattanDistance(node1, node2) {
+    static _euclideanDistance(node1, node2) {
       return Math.sqrt(
         Math.pow((node1.col - node2.col), 2),
         Math.pow((node1.row - node2.row), 2)
